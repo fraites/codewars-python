@@ -9,7 +9,7 @@ def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
         total_saved = savingperMonth * count
         if count % 2 == 0:
             # successfully increases the rate by 0.5 every 2 months
-            rate = rate_increase(count // 2, percentLossByMonth)
+            rate += 0.5
         test_price = price_old - (price_old * percentLossByMonth/100)
         price_old -= (price_old * percentLossByMonth/100)
         price_new -= (price_new * percentLossByMonth/100)
@@ -24,4 +24,4 @@ def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
 def rate_increase(n, percentPerMonth):
     rate = 10**(-2)*(percentPerMonth + (0.5*n))
     return rate
-    
+   
