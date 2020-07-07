@@ -8,7 +8,7 @@ import re
 # the password will be automatically asserted by test cases. Below is only an example
 password = "4fdg5Fj3"
 # you only need to fill in the search condition you're looking for to complete this kata
-regex = re.compile("^(?=.*[a-z])(?=.*[a-z])(?=.*[\d])[a-zA-Z\d]{6,}$")
+regex = re.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])[a-zA-Z\d]{6,}$")
 if regex.search(password):
     print(True)
 else:
