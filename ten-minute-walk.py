@@ -6,7 +6,6 @@
 
 def is_valid_walk(walk):
     dict = {}
-    sum = 0
     if len(walk) != 10:
         return False
     for d in walk:
